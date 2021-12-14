@@ -52,15 +52,14 @@ public class newframe extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jMenuItem11 = new javax.swing.JMenuItem();
         jSeparator8 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem12 = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem16 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem13 = new javax.swing.JMenuItem();
         jSeparator9 = new javax.swing.JPopupMenu.Separator();
         jMenuItem14 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem16 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -124,6 +123,11 @@ public class newframe extends javax.swing.JFrame {
                 jMenuItem5MouseClicked(evt);
             }
         });
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem5);
         jMenu2.add(jSeparator4);
 
@@ -149,6 +153,11 @@ public class newframe extends javax.swing.JFrame {
 
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Details.png"))); // NOI18N
         jMenuItem8.setText("Seeker Details");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem8);
 
         jMenuBar1.add(jMenu2);
@@ -182,14 +191,29 @@ public class newframe extends javax.swing.JFrame {
 
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Location.png"))); // NOI18N
         jMenuItem11.setText("Location");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem11);
         jMenu4.add(jSeparator8);
 
-        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Blood group.png"))); // NOI18N
-        jMenuItem12.setText("Blood Type");
-        jMenu4.add(jMenuItem12);
-
         jMenuBar1.add(jMenu4);
+
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/search1.png"))); // NOI18N
+        jMenu5.setText("Blood Request");
+
+        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Blood group.png"))); // NOI18N
+        jMenuItem16.setText("Blood Request");
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem16);
+
+        jMenuBar1.add(jMenu5);
 
         jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/stock.png"))); // NOI18N
         jMenu6.setText("Admin");
@@ -233,20 +257,6 @@ public class newframe extends javax.swing.JFrame {
         jMenu7.add(jMenuItem14);
 
         jMenuBar1.add(jMenu7);
-
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/search1.png"))); // NOI18N
-        jMenu5.setText("Blood Request");
-
-        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Blood group.png"))); // NOI18N
-        jMenuItem16.setText("Blood Request");
-        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem16ActionPerformed(evt);
-            }
-        });
-        jMenu5.add(jMenuItem16);
-
-        jMenuBar1.add(jMenu5);
 
         setJMenuBar(jMenuBar1);
 
@@ -319,7 +329,7 @@ public class newframe extends javax.swing.JFrame {
 
     private void jMenuItem5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem5MouseClicked
         // TODO add your handling code here:
-        new addNewSeeker().setVisible(true);
+       // new addNewSeeker().setVisible(true);
     }//GEN-LAST:event_jMenuItem5MouseClicked
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
@@ -331,6 +341,21 @@ public class newframe extends javax.swing.JFrame {
         // TODO add your handling code here:
         new DeleteSeeker().setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+        new allSeekerDetails().setVisible(true);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        // TODO add your handling code here:
+        new searchSeekerLocation().setVisible(true);
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        new addNewSeeker().setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -380,7 +405,6 @@ public class newframe extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;

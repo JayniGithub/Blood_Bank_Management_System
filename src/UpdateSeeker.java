@@ -192,6 +192,7 @@ public class UpdateSeeker extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        String id = jTextField1.getText();
         String name = jTextField2.getText();
         String dob = jTextField3.getText();
         String nic = jTextField4.getText();
@@ -204,7 +205,7 @@ public class UpdateSeeker extends javax.swing.JFrame {
         
             Connection con = connection.getCon();
             Statement st = con.createStatement();
-            st.executeUpdate("update seeker set name='"+name+"',dob='"+dob+"',nic='"+nic+"',email='"+email+"',gender='"+gender+"',phone='"+phone+"',address='"+addr+"'");
+            st.executeUpdate("update seeker set name='"+name+"',dob='"+dob+"',nic='"+nic+"',email='"+email+"',gender='"+gender+"',phone='"+phone+"',address='"+addr+"' where seeker_id = '"+id+"'");
             JOptionPane.showMessageDialog(null, "Successfully Updated...!");
             setVisible(false);
             new UpdateSeeker().setVisible(true);

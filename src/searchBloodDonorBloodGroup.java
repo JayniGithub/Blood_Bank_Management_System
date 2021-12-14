@@ -104,7 +104,7 @@ public class searchBloodDonorBloodGroup extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/all page background image.png"))); // NOI18N
         jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -133,7 +133,7 @@ public class searchBloodDonorBloodGroup extends javax.swing.JFrame {
         {
             Connection con=connection.getCon();
             Statement st=con.createStatement();
-            ResultSet rs=st.executeQuery("select *from donor where btype like '%"+bloodGroup+"%'");
+            ResultSet rs=st.executeQuery("select * from donor where btype = '"+bloodGroup+"'");
             jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
             jTable1.setModel(DbUtils.resultSetToTableModel(rs));
         }

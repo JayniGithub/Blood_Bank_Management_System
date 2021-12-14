@@ -178,7 +178,7 @@ public class stockDecrease extends javax.swing.JFrame {
         try{
             Connection con=connection.getCon();
             Statement st=con.createStatement();
-            st.executeUpdate("update stock set untis=units-'"+unit1+"'where bloodGroup='"+bloodGroup+"'");
+            st.executeUpdate("update stock set quantity=quantity-'"+unit1+"' where btype='"+bloodGroup+"'");
             JOptionPane.showMessageDialog(null, "Succesfully Updated");
             setVisible(false);
             new stockDecrease().setVisible(true);

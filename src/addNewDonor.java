@@ -101,6 +101,8 @@ public class addNewDonor extends javax.swing.JFrame {
 
         jTextField1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 117, 146, -1));
+
+        jDateChooser1.setDateFormatString("yyyy-MM-dd");
         getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 149, -1));
 
         jTextField4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -239,7 +241,7 @@ public class addNewDonor extends javax.swing.JFrame {
         // TODO add your handling code here:
         String donorid=jLabel3.getText();
         String name=jTextField1.getText();
-        SimpleDateFormat dFormat=new SimpleDateFormat("DD-MM-YYYY");
+        SimpleDateFormat dFormat=new SimpleDateFormat("yyyy-MM-dd");
         String DOB=dFormat.format(jDateChooser1.getDate());
         String MobileNo=jTextField4.getText();
         String gender=(String)jComboBox1.getSelectedItem();
@@ -253,7 +255,7 @@ public class addNewDonor extends javax.swing.JFrame {
             Connection con=connection.getCon();
             Statement st=con.createStatement();
             st.executeUpdate("insert into donor values('"+donorid+"','"+name+"','"+DOB+"','"+email+"','"+MobileNo+"','"+address+"','"+gender+"','"+city+"','"+bloodGroup+"','"+dicease+"')");
-            JOptionPane.showMessageDialog(null, "Successfully Updated");
+            JOptionPane.showMessageDialog(null, "Successfully Added");
             setVisible(false);
             new addNewDonor().setVisible(true);
         }

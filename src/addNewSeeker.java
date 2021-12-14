@@ -141,6 +141,8 @@ public class addNewSeeker extends javax.swing.JFrame {
 
         jTextField5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(492, 167, 160, -1));
+
+        jDateChooser1.setDateFormatString("yyyy-MM-dd");
         getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 227, 160, -1));
 
         jTextArea1.setColumns(20);
@@ -189,7 +191,7 @@ public class addNewSeeker extends javax.swing.JFrame {
         // TODO add your handling code here:
         String id = jLabel10.getText();
         String name = jTextField1.getText();
-        SimpleDateFormat dFormat = new SimpleDateFormat("DD-MM-YYYY");
+        SimpleDateFormat dFormat = new SimpleDateFormat("yyyy-MM-dd");
         String dob = dFormat.format(jDateChooser1.getDate());
         String nic = jTextField3.getText();
         String email = jTextField4.getText();

@@ -120,7 +120,7 @@ public class donation extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, -1, -1));
 
-        jDateChooser1.setDateFormatString("MM d, y");
+        jDateChooser1.setDateFormatString("yyyy-MM-dd");
         jDateChooser1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 230, -1));
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 428, 681, 10));
@@ -183,7 +183,7 @@ public class donation extends javax.swing.JFrame {
            String email = jTextField3.getText();
            String type = (String)jComboBox1.getSelectedItem();
            String quantity = jTextField4.getText();
-           SimpleDateFormat dFormat = new SimpleDateFormat("DD-MM-YYYY");
+           SimpleDateFormat dFormat = new SimpleDateFormat("yyyy-MM-dd");
            String dondt = dFormat.format(jDateChooser1.getDate());
            
         try{
